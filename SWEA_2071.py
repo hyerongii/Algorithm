@@ -19,11 +19,21 @@
 
 T = int(input())
 
-for i in range(T):
-    input_data = list(map(int, input().split()))
+for test_case in range(1, T+1):
+
+    # 10개의 수를 입력받은 줄 각각 int 형변환 후 리스트로 묶음
+    input_data = list(map(int, input().split())) 
+    
     sum = 0
-    len_input_data = len(input_data)
+    
+    # 10개로 동일하지만 추후 길이 바뀔경우 대비해서 len 사용
+    len_input_data = len(input_data)  
+    
     for j in range(len_input_data):
-        sum += input_data[j]
-        avg = round(sum/len_input_data)
-    print('#'+str(i+1)+' '+str(avg))
+        
+        # 리스트 내 값 다 더하기
+        sum += input_data[j] 
+    
+    # 리스트 내 다 더한 합을 값 개수로 나누고 소수점 첫째 자리에서 반올림
+    avg = round(sum/len_input_data)
+    print(f'#{test_case} {avg}')

@@ -16,10 +16,17 @@
 
 T = int(input())
 
-for i in range(T):
+for test_case in range(1, T+1):
     input_data = list(map(int, input().split()))
-    sum = 0
+    
+    odd_sum = 0
+
     for j in range(len(input_data)):
+
+        # 리스트 내 값의 나머지가 1이면 : 홀수이면 
         if input_data[j] % 2 == 1:
-            sum += input_data[j]
-    print('#'+str(i+1)+' '+str(sum))
+
+            # 값을 합에 더하기
+            odd_sum += input_data[j]
+            
+    print(f'#{test_case} {odd_sum}')
