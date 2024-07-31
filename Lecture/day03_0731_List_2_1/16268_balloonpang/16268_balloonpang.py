@@ -9,7 +9,7 @@ for test_case in range(1, T + 1):
     # 이거 무조건 익숙해지기
     arr = [list(map(int, input().split())) for _ in range(N)]
 
-    # 버블 arr 만들기
+    # 제로 패딩하기
     bubble_arr = [[0] * (M + 2) for _ in range(N + 2)]
     for i in range(N):
         for j in range(M):
