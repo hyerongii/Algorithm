@@ -6,13 +6,13 @@ T = int(input())
 for test_case in range(1, T + 1):
     arr = [list(input()) for _ in range(5)]
     new_arr = ""
-    
-    try:
-        for i in range(5):
+
+    for i in range(5):
+        try:
             for j in range(len(arr[i])):
                 new_arr += arr[j][i]
-        
-        print(f'#{test_case} {new_arr}')
 
-    except:
-        pass
+        except:
+                new_arr += ""
+    
+    print(f'#{test_case} {new_arr}')
