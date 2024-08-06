@@ -1,10 +1,19 @@
 import sys
 sys.stdin = open("input.txt", "r")
 
-def finding_longest_palindrome(arr):
+def is_palindrome(string):
+    
+    left, right = 0, len(string) -1
+    
+    while left < right:
+        if string[left] != string[right]:
+            return False
+        left += 1
+        right -= 1
 
-    # 가장 긴 회문의 글자 수를 저장할 변수
-    max_len = 1 
+    return True
+
+def finding_longest_palindrome(arr):
 
     # 행 우선 탐색
     for i in range(N):
@@ -29,23 +38,12 @@ def finding_longest_palindrome(arr):
 
                 if is_palindrome(column):
                     return length
-
-def is_palindrome(string):
-    
-    left, right = 0, len(string) -1
-    
-    while left < right:
-        if string[left] != string[right]:
-            return False
-        left += 1
-        right -= 1
-
-    return True
+    return 1
 
 for test_case in range(1, 11):
     tc = int(input())
     N = 100
-    arr = [input() for _ in range(100)]
+    arr = [input() for _ in range(N)]
 
     result = finding_longest_palindrome(arr)
 

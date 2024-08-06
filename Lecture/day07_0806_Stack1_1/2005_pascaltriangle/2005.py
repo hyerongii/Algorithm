@@ -1,25 +1,26 @@
 import sys
 sys.stdin = open("input.txt", "r")
 
-def pascal(n):
+# 나는 계속 1차원 배열로 생각함,,,
+# 2차원 배열로 생각하기
 
-    stack = []
-
-    if n == 1:
-        return [1]
-    
-    elif n > 2:
-        for _ in range(n):
-            stack.append(1)
-            stack.append(stack[-1]+1)
-
+# 점화식으로 생각해주기 
+# dp[i][j] = dp[i-1][j] + dp[i-1][j-1]
 
 T = int(input())
 for tc in range(1, T+1):
     N = int(input())
 
-    for _ in range(N):
-        print(pascal())
-
+    # 파스칼 출력 형태로 배열 틀 값이 모두 1인거로 생성
+    arr = [[0] * N for _ in range(N)]
     print(f'#{tc}')
-    print(pascal(N)) # 함수 넣기
+
+    # 2부터 더해짐
+    for i in range(N):
+        for j in range(i+1):
+            if j == 0 and i == 0:
+                arr[i][j] = 1
+            else:
+                arr[i][j] = arr[i-1][j-1] + arr[i-1][j]
+            print(arr[i][j], end=" ")
+        print()

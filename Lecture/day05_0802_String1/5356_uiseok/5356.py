@@ -7,12 +7,12 @@ for test_case in range(1, T + 1):
     arr = [list(input()) for _ in range(5)]
     new_arr = ""
 
-    for i in range(5):
-        try:
-            for j in range(len(arr[i])):
-                new_arr += arr[j][i]
+    for j in range(15):
+            for i in range(5):
+                try:
+                    new_arr += arr[i][j]
 
-        except:
-                new_arr += ""
-    
+                except:
+                        new_arr += ""
+                        
     print(f'#{test_case} {new_arr}')
