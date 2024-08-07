@@ -22,17 +22,16 @@ for test_case in range(1, T + 1):
     for i in range(E):
         v1, v2 = arr[i*2], arr[i*2+1]
         adjL[v1][v2] = 1
-    
-        # 0,0 제거
-    adjL = adjL[1:]
-    for i in range(len(adjL)):
-        adjL[i] = adjL[i][1:]
 
     visited = [False] * V
     current_lst = []
 
     dfs(0, adjL, visited)
-    print(current_lst)
-
+    
+    if 99 in current_lst:
+        print(f'#{tc} 1')
+    else:
+        print(f'#{tc} 0')
+    
 
     
