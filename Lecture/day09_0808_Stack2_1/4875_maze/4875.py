@@ -20,8 +20,7 @@ def moving_to_definition(cti, ctj): # 현재위치 넘기기
     # 방문한곳 true로 바꾸기
     visited[cti][ctj] = True
 
-    for k in range(len(dxy)):
-        dx, dy = dxy[k]
+    for dx, dy in dxy:
         nx, ny = cti+dx, ctj+dy
         if 0 > nx or 0 > ny or N <= nx or N <= ny:
             continue
