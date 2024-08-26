@@ -4,18 +4,20 @@ sys.stdin = open("input.txt", "r")
 def dfs(n, sum_v):
     global result
     # 결과가 sum_v보다 작으면 그값 return
+    # 백트래킹.. 
     if result <= sum_v:
         return
     # dfs 종료조건. 마지막 열 도착했을때 결과값이랑 sum_v중에 작은값 리턴
     if n == N:
         result = min(result, sum_v)
         return
-    #  방문한 행은 표시하기
+
     for i in range(N):
+        #  방문한 행은 표시하기 (행에서 한번 선택했으면 다음 행으로)
         if not visited[i]:
             visited[i] = 1
             dfs(n+1, sum_v + arr[n][i])
-            # 한바퀴 다 돌고 나서 합 구하고 다시 두번째 행부터 보려면,,
+            # 그 시작점에서 다 돌고 나서 합 구하고 다시 다음 값부터 시작하려면,,
             visited[i] = 0
 
 T = int(input())

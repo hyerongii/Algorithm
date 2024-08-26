@@ -15,5 +15,5 @@ for tc in range(1, T+1):
             stack.append(string[i])
         elif stack and stack[-1] == string[i]:
             stack.pop()
-
+    # 남은 번호들이 비밀번호가 된다
     print(f'#{tc} {"".join(stack)}')

@@ -1,3 +1,6 @@
+# 그래프 경로 dfs 사용해주기
+# 도착한적 있는지 없는지 확인해주기 위해서 
+
 def dfs(current, adjL, visited):
     # 현재 좌표 방문한적 있으면 True 체크하고 넘어가기
     visited[current] = True
