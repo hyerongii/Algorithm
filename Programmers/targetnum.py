@@ -30,7 +30,8 @@ def solution(numbers, target):
     answer = cnt
     return answer
 
-arr = list(map(int, input().split()))
-target = int(input())
-
-print(solution(arr, target))
+# 확인용 입력 값
+# arr = list(map(int, input().split()))
+# target = int(input())
+#
+# print(solution(arr, target))

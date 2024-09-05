@@ -18,7 +18,6 @@ for tc in range(1, T+1):
     adjL = [[] for _ in range(N + 1)]       # 인접리스트 만들기
     for i in range(M):
         x, y = map(int, input().split())
-        # 만약 문제에 중복된 관계가 있다고하 set 써주기
         adjL[x].append(y)  # 방향 두 방향 이면 두개 추가
         adjL[y].append(x)
 

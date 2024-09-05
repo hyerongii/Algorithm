@@ -20,7 +20,7 @@ def bfs(i):
             if not visited[j]:      # 방문 안했으면
                 q.append(j)         # 인큐
                 # 이 형태 BFS에서 많이 쓰인다고 함 - 최소 거리수 같은거 구할 때
-                visited[j] = visited[x] + 1    # 방문했다고 표시하고, 마지막까지 거쳐간 수 더해주기
+                visited[j] = visited[x] + 1   # 방문했다고 표시하고, 마지막까지 거쳐간 수 더해주기
 
 # 인풋 받기
 for tc in range(1, 11):
@@ -46,7 +46,7 @@ for tc in range(1, 11):
     # visted 에서 마지막 방문한 게 거리수 제일 큰거임
     max_v = max(visited)
 
-    # 인덱스 찾아주기
+    # 제일 큰 거리수의 인덱스 찾고 그중에서 값 제일 노드가 답임
     last_num = 0
     for i in range(101):
         if max_v == visited[i]:
