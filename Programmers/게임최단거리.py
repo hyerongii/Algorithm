@@ -3,7 +3,7 @@ def solution(maps):
     # 캐릭터는 항상 1,1 위치에 있음
     # 상대방은 항상 n,m 위치에 있음 point!!
 
-    # maps로 n, m 알아내기 확인
+    # maps로 n, m 알아내기
     n = len(maps)
     m = len(maps[0])
 
