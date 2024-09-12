@@ -22,6 +22,7 @@ def solution(tickets):
     answer = path
     return answer
 
-tickets = [["ICN", "JFK"], ["HND", "IAD"], ["JFK", "HND"]]
+# tickets = [["ICN", "JFK"], ["HND", "IAD"], ["JFK", "HND"]]
 # tickets = [["ICN", "SFO"], ["ICN", "ATL"], ["SFO", "ATL"], ["ATL", "ICN"], ["ATL","SFO"]]
+tickets = [["ICN", "AAA"], ["DDD", "ICN"], ["ICN", "DDD"]]
 print(solution(tickets))
